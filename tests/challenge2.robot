@@ -14,4 +14,4 @@ Scenario 1 - validating a product was added to the cart
     When User Searches For livro
     Then First Product Should Selected
     When User Clicks Buy Now And Logs In
-    Then Purchase Should Be Successful
+    Then Purchase Should Be Successfuly
