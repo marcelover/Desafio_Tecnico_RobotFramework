@@ -3,12 +3,11 @@ Visual studio code to write scripts
 Robot Framework with Selenium Webdriver
 Robot code to enhance the productivity
 Git Hub - to manage versions
-Git Hub actions - to execute in a pipeline
 
 # Structure
 Page Objects Model
 
-# creating a virtual env
+# Creating a virtual env
 python -m venv venv
 * inicializing
 .\venv\Scripts\activate
@@ -23,10 +22,13 @@ Chromedriver used version: r1465706(stable) - https://googlechromelabs.github.io
 
 # Email and Password
 Update file resources.robot with your e-mail and password
-If you will validate through Git Hub actions you need update envirorment variables
+If you want to validate through Git Hub actions you need write your deps on ci.yml file and update your envirorment variables
 
 # Executing tests and output results in a specific folder
 ## Running all tests
 robot --outputdir results tests/
+## Running just one file
+robot --outputdir results .\tests\challenge1.robot
+robot --outputdir results .\tests\challenge2.robot
 
 ## We are handle two systems, so I created two setup_teardown files and two folders inside PO to manage our tests
