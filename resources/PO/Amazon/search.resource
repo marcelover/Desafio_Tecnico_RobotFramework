@@ -14,17 +14,14 @@ ${button_confirme_order}    id=placeOrder
 ${finish_order}    id=nav-checkout-title-header-text
 
 *** keywords ***
-Get Search Title
-    [Documentation]    Get the title of the current page
+Then First Product Should Selected
+    [Documentation]    Get first product in the search results
     ${title}=    Get Title
     Should Be Equal As Strings    ${title}    Amazon.com.br : livro
-
-Get First Product Title
-    [Documentation]    Get first product in the search results
     Wait Until Element Is Visible    ${first_product_title}
     ${first_product_title}=    Click Element    ${first_product_title}
 
-Click Buy Now And Sign In
+When User Clicks Buy Now And Logs In
     [Documentation]    Click the buy now button and sign in
     Wait Until Element Is Visible    ${button_buy_now}
     Click Button    ${button_buy_now}
@@ -35,7 +32,7 @@ Click Buy Now And Sign In
     Input Text    ${input_password}    ${PASSWORD}
     Click Button    ${button_sign_in}
     
-Buy Item Selected
+Then Purchase Should Be Successful
     [Documentation]    follow the process to buy the item selected
     Wait Until Element Is Visible    ${link_decline_prime}
     Click Element    ${link_decline_prime}

@@ -2,7 +2,8 @@
 Visual studio code to write scripts
 Robot Framework with Selenium Webdriver
 Robot code to enhance the productivity
-Git Hub - Git Hub actions to manage version and to execute in a pipeline
+Git Hub - to manage versions
+Git Hub actions - to execute in a pipeline
 
 # Structure
 Page Objects Model
@@ -25,4 +26,7 @@ Update file resources.robot with your e-mail and password
 If you will validate through Git Hub actions you need update envirorment variables
 
 # Executing tests and output results in a specific folder
+## Running all tests
 robot --outputdir results tests/
+
+## We are handle two systems, so I created two setup_teardown files and two folders inside PO to manage our tests
